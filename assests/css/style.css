@@ -1,0 +1,160 @@
+.main-header, .col-4{
+    margin: auto;
+    text-align: center;
+}
+#infoRow{
+    width: 60%;
+    margin: auto;
+    padding-bottom:20px;
+}
+#gameRow{
+    width: 100%;
+    margin: auto;
+    height: 600px;
+}
+#gameCol{
+    width: 100%;
+    margin-top: 0;
+    padding: 0;
+}
+.gameSquare{
+    height: 200px;
+    margin: 0;
+    /* border-style: dashed;
+    border-width: 2px;
+    border-color: black; */
+}
+#rowA .col-2,#A5, #rowB .col-2, #B5{    
+    background-image: url('../images/gameArt/wallPic.png');
+    background-position-x: 50%;
+}
+.name{
+    font-size: 0.9em;
+    color: whitesmoke;
+    margin-bottom: 5px;
+}
+.health{
+    font-size: 0.9em;
+    width: 40%;
+    background-color: green;
+    color: black;
+    margin: 0;
+}
+.rest{
+    font-size: 0.9em;
+    width: 40%;
+    /* background-color: rgb(201, 133, 8); */
+    color: rgb(255, 255, 255);
+}
+#B5 .health{
+    width: 70%;
+    margin: auto;
+}
+#ground{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(59, 59, 59);
+}
+#wizPic{
+    position: relative;
+    right: 40px;
+    top: 21px;
+}
+#spell{
+    transform: rotate(70deg);
+    position: relative;
+    top:20px;
+    right: 70px;
+}
+#arcPic {
+    position: relative;
+    right: 40px;
+    top: 0px;
+}
+#arrow{
+    transform: rotate(10deg);
+    position: relative;
+    bottom: 20px;
+    right: 60px;
+}
+#warPic{
+    position: relative;
+    right: 40px;
+    top: 30px;
+}
+#warAttk{
+    position: relative;
+    left: 20px;
+    top: 0px;
+}
+#dragPic{
+    width: 100%;
+    position: relative;
+    bottom: 0px;
+    right: 40px;
+}
+#fireBall{
+    margin: 0;
+}
+
+@media screen and (max-width: 1200px){
+    #dragPic {
+        width: 100%;
+        position: relative;
+        bottom: 0px;
+        right: 40px;
+    }
+    #warPic {
+        position: absolute;
+        right: 40px;
+        top: 100px;
+    }
+    #arrow{
+        transform: rotate(10deg);
+        position: relative;
+        bottom: 0px;
+        right: 60px;
+    }
+}
+@media screen and (max-width: 990px){
+    #dragPic {
+        width: 140%;
+        position: relative;
+        bottom: 0px;
+        right: 40px;
+    }
+    #warPic {
+        position: relative;
+        right: 40px;
+        top: 10px;
+    }
+    #warAttk{
+        position: relative;
+        left: -20px;        
+        top: 0px;
+    }
+    #arrow{
+        transform: rotate(10deg);
+        position: relative;
+        top: 10px;
+        right: 20px;
+    }
+}
+@media screen and (max-width: 770px){
+    #dragPic {
+        width: 160%;
+        position: relative;
+        top: 30px;
+        right: 40px;
+    }
+    #warAttk{
+        position: relative;
+        left: -40px;
+        top: 0px;
+    }
+    #arrow{
+        transform: rotate(10deg);
+        position: relative;        
+        right: 20px;
+    }
+}

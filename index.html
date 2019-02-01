@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Developers and Dragons</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assests/css/style.css" />    
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-8 main-header">
+                <h1>Developers and Dragons</h1>
+                <div>
+                    <a href="rules.html"><p>Rules Page</p></a>
+                    <button id="start" type="button" class="btn btn-primary">Start</button>
+                </div>                                
+            </div>
+        </div>
+        <div id="infoRow" class="row">
+            <h3>INFO: <p id="info"></p></h3>
+        </div>
+        <div id="gameRow" class="row">
+            <div id="gameCol" class="col-12 center-block">
+                <div id="rowA" class="row">
+                    <div id="A1" class="col-2 gameSquare">
+                        
+                    </div>
+                    <div id="A2" class="col-2 gameSquare">
+                        
+                    </div>
+                    <div id="A3" class="col-2 gameSquare">
+                        
+                    </div>
+                    <div id="A4" class="col-2 gameSquare">
+
+                    </div>
+                    <div id="A5" class="col-4 gameSquare">
+
+                    </div>
+                    
+                </div>
+                <div id="rowB" class="row">
+                    <div id="B1" class="col-2 gameSquare">
+                        <h4 class="name">Wizard</h4>
+                        <h4 class="health">100</h4>
+                        <h4 class="rest">Rest</h4>
+                        <img id="wizPic" src="./assests/images/gameArt/wizard/casting1_16.png">
+                    </div>
+                    <div id="B2" class="col-2 gameSquare">
+                        <h4 class="name">Archer</h4>
+                        <h4 class="health">100</h4>
+                        <h4 class="rest">Rest</h4>
+                        <img id="spell" class="spell" src="./assests/images/gameArt/BOLT/BOLT_0.png"/>
+                        <img id="arcPic" src="./assests/images/gameArt/archer/idle1.png">
+                    </div>
+                    <div id="B3" class="col-2 gameSquare">
+                        <h4 class="name">Warrior</h4>
+                        <h4 class="health">100</h4>
+                        <h4 class="rest">Rest</h4>
+                        <img id="arrow" class="arrow" src="./assests/images/gameArt/ArrowUp.png"/>
+                        <img id="warPic" src="./assests/images/gameArt/warrior/idle10.png">
+                    </div>
+                    <div id="B4" class="col-2 gameSquare">
+                        <img id="fireBall" src="./assests/images/gameArt/New Piskel (11).png"/>
+                       <img id="warAttk" src="./assests/images/gameArt/warrior/Attack1_5.png">
+                    </div>
+                    <div id="B5" class="col-4 gameSquare">                        
+                        <h4 class="name">Dragon</h4>
+                        <h4 id="dragHP" class="health">300</h4>                        
+                        <img id="dragPic" src="./assests/images/gameArt/dragon.png">
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div id="ground" class="col-12">
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>   
+        <div class="row">
+            <h3>Footer</h3>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="./assests/javascript/main.js"></script>
+</body>
+</html>
