@@ -1,16 +1,42 @@
-.main-header, .col-4{
+body{
+    background-color: darkgrey
+}
+a p{
+    color: black;
+}
+.main-header{
     margin: auto;
     text-align: center;
+    background-color: gray;
+    padding-bottom: 10px
+}
+#attk{
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+#rest{
+    width: 100%;
+    margin-top: 10px;
 }
 #infoRow{
-    width: 60%;
+    width: 90%;
     margin: auto;
+    text-align: center;
+    padding-top:10px;
     padding-bottom:20px;
+    color: antiquewhite;
 }
+/* #info{
+    border-style: dashed;
+    border-width: 5px;
+    color: black;
+} */
 #gameRow{
     width: 100%;
     margin: auto;
     height: 600px;
+    
 }
 #gameCol{
     width: 100%;
@@ -27,6 +53,14 @@
 #rowA .col-2,#A5, #rowB .col-2, #B5{    
     background-image: url('../images/gameArt/wallPic.png');
     background-position-x: 50%;
+}
+#rules{
+    background-color: antiquewhite;
+    margin-top:30px;
+    padding-bottom: 10px;
+}
+#B5{
+    text-align: center;
 }
 .name{
     font-size: 0.9em;

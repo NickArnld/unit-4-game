@@ -42,7 +42,7 @@ const char3 = {
 };
 const dragon = {
     name: "Dragon",
-    hP: 300,
+    hP: 200,
     hasAttacked: false,
     mainPic: "./assests/images/gameArt/dragon.png",
     attkPic: "./assests/images/gameArt/dragonAttack2.png",       
@@ -56,6 +56,7 @@ const controllerObj = {
 var turn = 0;
 var curPhase = 0;
 var started = false;
+var charDead = 0;
 
 $("#start").click(startGame);
 
@@ -92,7 +93,11 @@ function newPhase(thisPhase){
     }else if(thisChar === dragon){
         dragonPhase()
     }else{
-        moveController();        
+        if(thisChar.alive){
+            moveController(); 
+        }else{
+            endPhase();
+        }       
     }
 }
 
@@ -123,16 +128,21 @@ function endPhase(){
         $(thisChar.cLocale).empty();
         curPhase++;
         newPhase(curPhase);
-    }
-
-    
+    }    
 }
 
 function dragonPhase(){
     console.log("DRAGON PHASE!!!");
-    var rando = Math.floor(Math.random()*3);
-    var charAttacked = charArr[rando];
-    dragonDmg(charAttacked);
+    $("#dragPic").attr("src",dragon.attkPic);
+
+    setTimeout(()=>{$("#fireBall").css("visibility","visible");},250);
+    
+    setTimeout(()=>{$("#dragPic").attr("src",dragon.mainPic);},1000);
+
+    setTimeout(()=>{$("#fireBall").css("visibility","hidden");},2000);
+
+    setTimeout(dragonDmg(),1000);
+    healthCheck();
 }
 
 function charAttack(){        
@@ -191,13 +201,18 @@ function animation(dmg){
 
 }
 
-function dragonAnimation(){
-
-}
-
-function dragonDmg(character){
-    $("#info").html(` The Dragon hit the ${character.name} for 20 damage!`);
-    character.hP -= 20;
+function dragonDmg(){
+    var aliveArr = [];
+    for(var x=0;x<3;x++){
+        var current = charArr[x];
+        if(current.alive){
+            aliveArr.push(current);
+        }
+    }
+    var rando = Math.floor(Math.random()*aliveArr.length);
+    var charAttacked = aliveArr[rando];
+    $("#info").html(` The Dragon hit the ${charAttacked.name} for 20 damage!`);
+    charAttacked.hP -= 20;
     endPhase();
 }
 
@@ -227,10 +242,15 @@ function healthCheck(){
 }
 
 function death(character){
+    charDead++
     $(character.charImg).attr("src", character.deadPic);
     character.alive = false;
+    if(charDead>2){
+        $("#info").html("YOU LOST");
+    }
 }
 
 function win(){
-
+    $("#dragPic").css("visibility","hidden");
+    $("#B5").html("<h1>You Win!</h1>");
 }
